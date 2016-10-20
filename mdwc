@@ -19,7 +19,7 @@
 
 getopt --test > /dev/null
 if [[ $? != 4 ]]; then
-    echo "I’m sorry, `getopt --test` failed in this environment."
+    echo "I'm sorry, 'getopt --test' failed in this environment."
     echo "Exiting (your shell doesn't support needed functionality)."
     exit 1
 fi
