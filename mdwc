@@ -88,9 +88,19 @@ while true; do
             echo "$0: wc wrapper for pandoc MarkDown files with YAML block."
             echo
             echo "arguments:"
-            echo -e "  --title, -t \t run wc on title line in initial YAML block"
-            echo -e "              \t (note: will not work on multiline titles)"
-            echo -e "  --body, -b  \t run wc on body (everything after initial YAML block)"
+            echo -e "  --title, -t   \t run wc on title line in initial YAML block"
+            echo -e "                \t (note: will not work on multiline titles)"
+            echo
+            echo -e "  --body,  -b   \t run wc on body (everything after initial YAML block)"
+            echo
+            echo -e "  --field, -f   \t run wc on specified top-level YAML field"
+            echo -e "                \t Note: this will extract multiline fields and can be"
+            echo -e "                \t used to extract multliline titles. This method is "
+            echo -e "                \t slower, which may be come apparant when applied to "
+            echo -e "                \t large (numbers of) files."
+            echo
+            echo -e "  --key,   -k   \t synonym for --field. One of these may be removed"
+            echo -e "                \t in the future"
             echo
             echo "wc arguments supported: (see man wc for more details)"
             echo "  --bytes, -c"
